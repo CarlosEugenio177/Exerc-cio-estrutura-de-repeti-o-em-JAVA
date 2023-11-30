@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+public class Main {
+    public static void main(String[] args) {
+        String nome = JOptionPane.showInputDialog("Digite um nome:");
+        nome = nome.toLowerCase();
+        int contadorVogais = 0;
+
+        for (int i = 0; i < nome.length(); i++) {
+            char caractere = nome.charAt(i);
+            if ("aeiou".contains(String.valueOf(caractere))) {
+                contadorVogais++;
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, "O nome '" + nome + "' contém " + contadorVogais + " vogais",
+                "Contagem de Vogais", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
