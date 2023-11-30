@@ -1,0 +1,18 @@
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        double x;
+        double y = 1;
+        String inputValue = JOptionPane.showInputDialog("Insira seu número");
+        x = Double.parseDouble(inputValue);
+
+        while (x > 1) {
+            y = y * x;
+            x--;
+        }
+
+        JOptionPane.showMessageDialog(null, "Resultado: " + y, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+        // NOTA: JOptionPane.showMessageDialog vai mostrar o resultado do fatorial.
+    }
+}
